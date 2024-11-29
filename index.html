@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+    <form id="form1" onsubmit="evaluation(event)">
+       
+        <input type="text" id="ip1"><br><br>
+    
+        <input type="button" id="a1" value="AC" onclick="clearDisplay()">
+        <input type="button" id="a2" value="/" onclick="input(event)">
+        <input type="button" id="a3" value="%" onclick="input(event)">
+        <input type="button" id="a4" value="C" onclick="removelast()"><br><br>
+
+        <input type="button" id="a6" value="7" onclick="input(event)">
+        <input type="button" id="a7" value="8" onclick="input(event)">
+        <input type="button" id="a8" value="9" onclick="input(event)">
+        <input type="button" id="a9" value="*" onclick="input(event)"><br><br>
+        <input type="button" id="a10" value="4" onclick="input(event)">
+        <input type="button" id="a11" value="5" onclick="input(event)">
+        <input type="button" id="a12" value="6" onclick="input(event)">
+        <input type="button" id="a13"  value="-" onclick="input(event)"><br><br>
+        <input type="button" id="a14" value="1" onclick="input(event)">
+        <input type="button" id="a15" value="2" onclick="input(event)">
+        <input type="button" id="a16" value="3" onclick="input(event)">
+        <input type="button" id="a17"  value="+" onclick="input(event)"><br><br>
+        <input type="button"id="a18"  value="0" onclick="input(event)">
+        <input type="button" id="a19" value="00" onclick="input(event)">
+        <input type="button" id="a20" value="." onclick="input(event)">
+        
+
+        
+
+        <input type="submit" id="a21" value="=" >
+    </form>
+</div>
+    <script>
+        let form1=document.getElementById("form1");
+        let ip1=document.getElementById("ip1");
+        ip1.style.width="217px"
+        ip1.style.backgroundColor="#D4D2D2"
+        ip1.style.color="black"
+        
+
+
+       function input(event){
+        ip1.value+=event.target.value
+        
+       }
+
+       function clearDisplay(){
+        ip1.value=""
+       }
+       function removelast(){
+        ip1.value=ip1.value.slice(0,-1)
+       }
+
+        function evaluation(event){
+            event.preventDefault();
+             res=eval(ip1.value);
+            ip1.value=res;
+
+        }
+        let main=document.getElementById("main");
+        main.style.backgroundColor="#333333";
+        // main.style.height="px"
+        main.style.width="225px"
+        // main.style.display="flex"
+        main.style.justifyContent="center"
+
+
+        let inp=document.getElementById("a4")
+        inp.style.backgroundColor="#FF9500";
+        inp.style.height="50px"
+        inp.style.width="50px"
+        inp.style.borderRadius="100px"
+        inp.style.borderRadius="100px"
+        inp.style.color="white"
+        inp.style.border="2px solid black"
+        
+
+        let inp1=document.getElementById("a9")
+        inp1.style.backgroundColor="#FF9500";
+        inp1.style.height="50px"
+        inp1.style.width="50px"
+        inp1.style.borderRadius="100px"
+        inp1.style.color="white"
+        // inp1.style.fontSize="30px"
+        inp1.style.justifyContent="center"
+        inp1.style.alignItems="center"
+        
+
+        let inp2=document.getElementById("a13")
+        inp2.style.backgroundColor="#FF9500";
+        inp2.style.height="50px"
+        inp2.style.width="50px"
+        inp2.style.borderRadius="100px"
+        inp2.style.borderRadius="100px"
+        inp2.style.color="white"
+        // inp2.style.fontSize="30px"
+
+        let inp3=document.getElementById("a17")
+        inp3.style.backgroundColor="#FF9500";
+        inp3.style.height="50px"
+        inp3.style.width="50px"
+        inp3.style.borderRadius="100px"
+        inp3.style.borderRadius="100px"
+        inp3.style.color="white"
+        // inp3.style.fontSize="30px"
+
+        let inp4=document.getElementById("a21")
+        inp4.style.backgroundColor="#FF9500";
+        inp4.style.height="50px"
+        inp4.style.width="50px"
+        inp4.style.borderRadius="100px"
+        inp4.style.borderRadius="100px"
+        inp4.style.color="white"
+        // inp4.style.fontSize="30px"
+        inp4.style.border="2px solid black"
+        
+        let inp5=document.getElementById("a1");
+        inp5.style.height="50px"
+        inp5.style.width="50px"
+        inp5.style.borderRadius="100%";
+        inp5.style.border="2px solid black"
+        inp5.style.backgroundColor="#505050"
+        inp5.style.color="white"
+
+        
+
+        let inp6=document.getElementById("a2");
+        inp6.style.height="50px"
+        inp6.style.width="50px"
+        inp6.style.borderRadius="100px"
+        inp6.style.border="2px solid black"
+        inp6.style.backgroundColor="#505050"
+        inp6.style.color="white"
+
+        let inp7=document.getElementById("a3");
+        inp7.style.height="50px"
+        inp7.style.width="50px"
+        inp7.style.borderRadius="100px"
+        inp7.style.border="2px solid black"
+        inp7.style.backgroundColor="#505050"
+        inp7.style.color="white"
+
+        // let inp8=document.getElementById("a5");
+        // inp8.style.height="50px"
+        // inp8.style.width="50px"
+        // inp8.style.borderRadius="100px"
+
+        let inp9=document.getElementById("a6");
+        inp9.style.height="50px"
+        inp9.style.width="50px"
+        inp9.style.borderRadius="100px"
+        inp9.style.border="2px solid black"
+        inp9.style.backgroundColor="#1C1C1C"
+        inp9.style.color="white"
+
+        let inp10=document.getElementById("a7");
+        inp10.style.height="50px"
+        inp10.style.width="50px"
+        inp10.style.borderRadius="100px"
+        inp10.style.border="2px solid black"
+        inp10.style.backgroundColor="#1C1C1C"
+        inp10.style.color="white"
+
+        let inp11=document.getElementById("a8");
+        inp11.style.height="50px"
+        inp11.style.width="50px"
+        inp11.style.borderRadius="100px"
+        inp11.style.border="2px solid black"
+        inp11.style.backgroundColor="#1C1C1C"
+        inp11.style.color="white"
+
+
+        let inp12=document.getElementById("a10");
+        inp12.style.height="50px"
+        inp12.style.width="50px"
+        inp12.style.borderRadius="100px"
+        inp12.style.border="2px solid black"
+        inp12.style.backgroundColor="#1C1C1C"
+        inp12.style.color="white"
+
+
+        let inp13=document.getElementById("a11");
+        inp13.style.height="50px"
+        inp13.style.width="50px"
+        inp13.style.borderRadius="100px"
+        inp13.style.border="2px solid black"
+        inp13.style.backgroundColor="#1C1C1C"
+        inp13.style.color="white"
+
+
+        let inp14=document.getElementById("a12");
+        inp14.style.height="50px"
+        inp14.style.width="50px"
+        inp14.style.borderRadius="100px"
+        inp14.style.border="2px solid black"
+        inp14.style.backgroundColor="#1C1C1C"
+        inp14.style.color="white"
+
+
+        let inp15=document.getElementById("a14");
+        inp15.style.height="50px"
+        inp15.style.width="50px"
+        inp15.style.borderRadius="100px"
+        inp15.style.border="2px solid black"
+        inp15.style.backgroundColor="#1C1C1C"
+        inp15.style.color="white"
+
+        
+        let inp16=document.getElementById("a15");
+        inp16.style.height="50px"
+        inp16.style.width="50px"
+        inp16.style.borderRadius="100px"
+        inp16.style.border="2px solid black"
+        inp16.style.backgroundColor="#1C1C1C"
+        inp16.style.color="white"
+
+
+        let inp17=document.getElementById("a16");
+        inp17.style.height="50px"
+        inp17.style.width="50px"
+        inp17.style.borderRadius="100px"
+        inp17.style.border="2px solid black"
+        inp17.style.backgroundColor="#1C1C1C"
+        inp17.style.color="white"
+
+
+        let inp18=document.getElementById("a18");
+        inp18.style.height="50px"
+        inp18.style.width="50px"
+        inp18.style.borderRadius="100px"
+        inp18.style.border="2px solid black"
+        inp18.style.backgroundColor="#1C1C1C"
+        inp18.style.color="white"
+
+
+        let inp19=document.getElementById("a19");
+        inp19.style.height="50px"
+        inp19.style.width="50px"
+        inp19.style.borderRadius="100px"
+        inp19.style.border="2px solid black"
+        inp19.style.backgroundColor="#1C1C1C"
+        inp19.style.color="white"
+
+
+        let inp20=document.getElementById("a20");
+        inp20.style.height="50px"
+        inp20.style.width="50px"
+        inp20.style.borderRadius="100px"
+        inp20.style.border="2px solid black"
+        inp20.style.backgroundColor="#1C1C1C"
+        inp20.style.color="white"
+
+
+    </script>
+</body>
+</html>
